@@ -1,0 +1,283 @@
+body, html {
+    font-family: 'Roboto', sans-serif;
+}
+
+#header {
+    width: 100%;
+    background-color: transparent;
+    transition: background ease-out 0.2s;
+}
+
+#header.active {
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    /* Para ficar acima de tudo */
+    z-index: 9999;
+}
+
+/* div com os itens do menu */
+#header .navbar-collapse {
+    width: auto;
+}
+
+/* nav-link é referente a cada um dos links do menu */
+#header .nav-link {
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-left: 0;
+    padding-right: 0;
+    color: #000;
+    /* Para tirar o "efeito de pulo" */
+    border-bottom: solid 4px transparent;
+}
+
+/* Efeito quando passa o mouse em cima */
+#header .nav-link:hover {
+    border-bottom: solid 4px var(--secondary);
+    color: var(--secondary);
+}
+
+#slider {
+    background: url(/assets/slider-bg.svg) no-repeat center bottom;
+    /* Para ficar sempre do tamanho do elemento (contain) */
+    background-size: contain;
+}
+
+#slider h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+#slider h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#servicos a.destaque {
+    display: block;
+    background: var(--ligth);
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    color: #000;
+    text-decoration: none;
+    transition: all ease-out 0.2s;
+}
+
+#servicos a.destaque:hover {
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+    transform: scale(1.05);
+}
+
+#servicos p {
+    color: var(--dark);
+}
+
+#servicos a.destaque .img-container {
+    display: flex;
+    /* Vertical */
+    align-items: center;
+    /* Horizontal */
+    justify-content: center;
+    height: 200px;
+}
+
+#servicos a.destaque .img-container img {
+    max-width: 160px;
+    max-height: 160px;
+}
+
+#clientes a.link-cliente {
+    padding: 0 15px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border: solid 1px var(--ligth);
+    height: 100px;
+    transition: ease-out all 0.2s;
+}
+
+#clientes a.link-cliente:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+#clientes a.link-cliente img {
+    filter: grayscale(100%);
+    max-height: 70px;
+    width: 100%;
+    opacity: 0.6;
+}
+
+#clientes a.link-cliente:hover img {
+    filter: none;
+    opacity: 1;
+}
+
+#clientes .cliente-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: var(--ligth);
+    border-radius: 5px;
+}
+
+#clientes .cliente-texto .imagem {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    /* -70px para a imagem sair um pouco para fora */
+    margin-left: -70px;
+    color: #b4b4b4;
+    font-size: 24px;
+    line-height: 26px;
+}
+
+#clientes .cliente-texto .imagem span {
+    color: var(--secondary);
+    font-size: 110px;
+    line-height: 110px;
+    /* Para diminuir o espaçamento */
+    letter-spacing: -10px;
+    font-weight: 900;
+    display: block;
+}
+
+#clientes .cliente-texto .telefone {
+    display: flex;
+    font-size: 14px;
+    color: #b4b4b4;
+}
+
+#clientes .cliente-texto .telefone span {
+    font-size: 25px;
+    color: #797979;
+    font-weight: 900;
+    display: block;    
+}
+
+#recentes .badge {
+    font-weight: 400;
+}
+
+#recentes .element-item img {
+    border-radius: 5px;
+    transition: all ease-out 0.2s;
+}
+
+#recentes .element-item img:hover {
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+#recentes .button-group {
+    margin-bottom: 30px;
+}
+
+#recentes .button-group button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    outline: none;
+}
+
+/* Margin Left em todos, menos no 1° */
+#recentes .button-group button + button {
+    margin-left: 30px;
+}
+
+/* Deixando o botão ativo com a cor primária */
+#recentes .button-group button.active {
+    color: var(--primary);
+}
+
+#depoimentos .depoimento {
+    background-color: var(--ligth);
+    border-radius: 5px;
+    display: flex;
+    padding: 30px;
+}
+
+#depoimentos .depoimento .quote {
+    max-width: 35px;
+}
+
+#depoimentos .depoimento .name {
+    color: #aaaaaa;
+}
+
+#depoimentos .depoimento .name span {
+    color: #000;
+    font-weight: 700;
+}
+
+#contato .email {
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 30px;
+}
+
+#contato .email img {
+    position: absolute;
+    left: 30px;
+    top: -30px;
+}
+
+#contato .email form {
+    width: 60%;
+    display: flex;
+}
+
+#contato .email .form-control,
+#contato .email .form-control::placeholder {
+    background: none;
+    color: #fff;
+}
+
+#contato ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#contato ul li {
+    display: flex;
+    list-style: none;
+    margin-left: 25px;
+}
+
+#contato ul li:first-child {
+    margin-left: 0;
+}
+
+#contato ul li a {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: all ease-out 0.2s;
+}
+
+#contato ul li a:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+#contato ul li img {
+    max-height: 20px;
+}
